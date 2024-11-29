@@ -1,0 +1,166 @@
+/*@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap');*/
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Montserrat', sans-serif; /* Fonte moderna */
+}
+
+body {
+    background: linear-gradient(135deg, #4c0296, #8c1aff); /* Gradiente suave de roxo */
+    color: #fff; /* Cor do texto */
+    font-size: 16px;
+    line-height: 1.5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+    padding: 20px;
+}
+
+#novoProduto {
+  display: none;
+}
+
+.container {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+header {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  flex-grow: 1;
+}
+
+header i {
+  display: none;
+}
+
+section {
+  display: flex;
+  flex-flow: column;
+  flex-wrap: wrap;
+}
+
+.container h1 {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  color: #4c0296;
+  width: 100%; /* Garante que o título ocupe a largura total */
+  text-align: center;
+}
+
+
+
+.produto {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: baseline;
+
+  margin: 1vh;
+    background-color: #6027af; /* Cor de fundo roxa para produtos */
+    border-radius: 20px;
+    box-shadow: 0 4px 10px #0000006f; /* Sombra suave */
+    transition: transform 0.3s ease; /* Transição para hover */
+}
+
+.nome {
+  font-size: 1.2em;
+  font-weight: bold;
+  padding: 2vh;
+  color: #ffffff; /* Cor do texto */
+  text-align: center;
+}
+
+.autor {
+  font-size: smaller;
+  font-weight: normal;
+  color: grey;
+}
+
+.preco,
+.quantidade {
+    font-size: small;
+    margin: 0 1vh;
+    font-weight: 500; /* Peso de fonte levemente mais forte */
+    color: #fdfdfd; /* Cor clara */
+    text-align: center;
+}
+
+.miniatura {
+  padding: 1vh;
+  max-width: 20vh;
+  height: auto;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2); /* Sombra suave */
+}
+
+.logo img {
+  padding: 2vh;
+  max-width: 30vh;
+  border-radius: 50%;
+  height: auto;
+}
+
+#total {
+  align-self: flex-end;
+  font-weight: bold;
+  font-size: 1.2em;
+  color: #ffffff;
+  text-align: center;
+}
+
+
+@media screen and (max-width: 480px) {
+
+  header i {
+      display: block;
+      font-size: x-large;
+      color: #fff;
+  }
+
+  section {
+      display: flex;
+      flex-flow: column;
+      padding: 10px;
+  }
+
+
+  .logo {
+    display: none;
+  }
+
+  .titulo {
+    font-size: 20px;
+    color: #fff;
+}
+
+  .produto {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    background-color: lightcyan;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .preco,
+    .qtd {
+        font-weight: bold;
+        font-size: 1.1em;
+        margin: 10px 0;
+    }
+
+    .miniatura-img {
+      max-width: 15vh;
+      height: auto;
+      padding: 1vh;
+  }
+}

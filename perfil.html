@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="IMG/Icon Pagina.png">
+    <title>COMMUNITY LENDS | POSTAR PRODUTO</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/Icon pagina.png" alt="Logo Community Lends" style="max-width: 50px;">
+        </div>
+        <h1 class="logo">COMMUNITY <span class="lends">LENDS</span></h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar produtos">
+            <button>Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a href="../SITE TCC (HOME)/home.html">Início</a>
+            </div>
+            <div class="dropdown">
+                <a href="#">Sobre Nós</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sidebar">
+        <div class="profile-circle">
+            <img src="https://imgs.search.brave.com/aWL2Y23L6-EeyZXE3fw-ZmyqBPCiAGz6Bcd6TTqhyg8/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9pbWcu/ZnJlZXBpay5jb20v/Zm90b3MtcHJlbWl1/bS9pbWFnZW5zLW91/LWZvdG9zLW1vbGR1/cmEtY29sYWdlbS1l/LWZvdG8tZGlnaXRh/bF8xMjA2NDEzLTIx/MjI2LmpwZz9zZW10/PWFpc19oeWJyaWQ" alt="Foto de perfil">
+        </div>
+        
+        <div class="options">
+            <a href="#" onclick="showModal('change-password')">Mudar senha</a>
+            <a href="#" onclick="showModal('email')">Email</a>
+            <a href="#" onclick="showModal('phone')">Telefone</a>
+            <a href="#" onclick="showModal('cards')">Cartões</a>
+            <a href="#" onclick="showModal('reports')">Denúncias</a>
+        </div>
+    </div>
+    
+    <div id="modal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <div id="modal-body">
+                <!-- Conteúdo dinâmico será inserido aqui -->
+            </div>
+        </div>
+    </div>
+    
+    <script src="JS/main.js"></script>
+
+</body>
+</html>

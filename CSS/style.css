@@ -1,0 +1,374 @@
+/* Reset básico para remover margens e preenchimentos padrões */
+* {
+    margin: 0; /* Remove a margem padrão de todos os elementos */
+    padding: 0; /* Remove o preenchimento padrão de todos os elementos */
+    box-sizing: border-box; /* Configura o box-sizing para incluir padding e border no tamanho total do elemento */
+}
+
+/* Estilo do corpo da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte da página */
+    background-color: #343434; /* Cor de fundo do corpo */
+    color: #ffffff; /* Cor do texto do corpo */
+    display: flex; /* Define o display como flex para centralizar o conteúdo */
+    flex-direction: column; /* Coloca o conteúdo em uma coluna */
+    align-items: center; /* Centraliza o conteúdo horizontalmente */
+}
+
+/* Estilo do cabeçalho */
+header {
+    position: fixed; /* Fixa o cabeçalho no topo da página */
+    top: 0; /* Coloca o cabeçalho no topo */
+    width: 100%; /* Cabeçalho ocupa toda a largura da página */
+    background-color: #1d1d1d; /* Cor de fundo do cabeçalho */
+    color: white; /* Cor do texto do cabeçalho */
+    display: flex; /* Exibe os elementos do cabeçalho em uma linha */
+    justify-content: space-between; /* Espaça os itens entre as extremidades */
+    align-items: center; /* Centraliza os itens verticalmente */
+    padding: 20px; /* Espaço interno do cabeçalho */
+    z-index: 1000; /* Garante que o cabeçalho fique acima de outros elementos */
+}
+
+/* Logo e nome da plataforma */
+header h1.logo {
+    font-size: 24px; /* Tamanho da fonte do nome da plataforma */
+    margin-right: 20px; /* Espaçamento à direita do título */
+    display: flex; /* Exibe logo e nome em uma linha */
+    align-items: center; /* Centraliza logo e nome verticalmente */
+}
+
+.logo img {
+    width: 50px; /* Define a largura da logo */
+    margin-right: 10px; /* Espaço entre a logo e o nome */
+}
+
+span.lends {
+    color: #a94ee5; /* Define a cor roxa para o texto 'LENDS' */
+}
+
+/* Barra de pesquisa */
+.search-bar {
+    flex-grow: 1; /* Expande a barra de pesquisa para ocupar o espaço disponível */
+    display: flex; /* Exibe os itens da barra de pesquisa em uma linha */
+    justify-content: center; /* Centraliza a barra de pesquisa horizontalmente */
+    align-items: center; /* Centraliza a barra de pesquisa verticalmente */
+    gap: 10px; /* Espaço entre o campo de entrada e o botão */
+}
+
+.search-bar input {
+    width: 50%; /* Define a largura do campo de entrada */
+    padding: 10px; /* Preenchimento interno do campo */
+    border: none; /* Remove a borda do campo */
+    border-radius: 4px; /* Adiciona bordas arredondadas */
+}
+
+.search-bar button {
+    padding: 10px 20px; /* Preenchimento interno do botão */
+    border: none; /* Remove a borda do botão */
+    background-color: #a94ee5; /* Cor de fundo do botão */
+    color: white; /* Cor do texto do botão */
+    border-radius: 4px; /* Adiciona bordas arredondadas ao botão */
+    cursor: pointer; /* Mostra o cursor de mão ao passar o mouse */
+}
+
+/* Links de navegação */
+.nav-links {
+    display: flex; /* Exibe os links de navegação em uma linha */
+    align-items: center; /* Centraliza os links verticalmente */
+}
+
+.nav-links a {
+    margin-left: 20px; /* Espaço entre cada link */
+    color: white; /* Cor dos links */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    font-size: 16px; /* Tamanho da fonte dos links */
+    padding: 10px 15px; /* Preenchimento interno dos links */
+    border: 2px solid transparent; /* Borda transparente por padrão */
+    transition: all 0.3s ease; /* Transição suave ao passar o mouse */
+    box-sizing: border-box; /* Inclui padding e borda no tamanho do link */
+}
+
+.nav-links a:hover {
+    border: 2px solid #a94ee5; /* Borda roxa ao passar o mouse */
+    border-radius: 5px; /* Bordas arredondadas ao passar o mouse */
+    background-color: #333; /* Cor de fundo ao passar o mouse */
+}
+
+/* Estilos do dropdown */
+.dropdown {
+    position: relative; /* Define a posição como relativa para que o menu possa ser posicionado em relação ao item pai */
+    display: inline-block; /* Mantém o dropdown na mesma linha dos outros itens */
+}
+
+.dropdown-menu {
+    display: none; /* Esconde o menu dropdown por padrão */
+    position: absolute; /* Define a posição como absoluta para que apareça abaixo do item "Conta" */
+    background-color: #1d1d1d; /* Altera a cor de fundo do menu para combinar com o cabeçalho */
+    min-width: 120px; /* Define uma largura mínima menor para o menu */
+    margin: 0; /* Remove qualquer margem do menu dropdown */
+    padding: 0; /* Remove o preenchimento padrão do menu */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1); /* Adiciona uma sombra leve */
+    border-radius: 5px; /* Adiciona cantos arredondados ao menu */
+    z-index: 1; /* Garante que o menu fique acima de outros elementos */
+    left: 0; /* Alinha o menu dropdown ao lado esquerdo do elemento pai */
+}
+
+.dropdown-menu li {
+    list-style: none; /* Remove o estilo de lista padrão */
+}
+
+.dropdown-menu li a {
+    color: white; /* Define a cor do texto do menu como branco */
+    padding: 10px 15px; /* Adiciona preenchimento interno aos itens do menu */
+    text-decoration: none; /* Remove o sublinhado dos links */
+    display: block; /* Faz com que os links ocupem a largura total do menu */
+}
+
+.dropdown-menu li a:hover {
+    background-color: #a94ee5; /* Muda a cor de fundo ao passar o mouse sobre os itens do menu */
+    color: #1d1d1d; /* Muda a cor do texto para preto escuro ao passar o mouse */
+}
+
+/* Exibe o menu quando o mouse está sobre o item "Conta" */
+.dropdown:hover .dropdown-menu {
+    display: block; /* Mostra o menu dropdown ao passar o mouse */
+}
+
+/* Container principal para a área de postagem de produto */
+.post-product-container {
+    max-width: 600px; /* Define a largura máxima do container */
+    width: 90%; /* Define a largura como 90% da tela para ser responsivo */
+    background-color: #202020; /* Cor de fundo do container */
+    padding: 30px; /* Preenchimento interno do container */
+    border-radius: 10px; /* Bordas arredondadas do container */
+    margin-top: 10px; /* Espaçamento superior para separar do cabeçalho */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra ao redor do container */
+
+    /* Centralização vertical e horizontal */
+    position: absolute;
+    top: 50%; /* Posiciona o topo do container no meio da tela */
+    left: 50%; /* Posiciona o lado esquerdo do container no meio da tela */
+    transform: translate(-50%, -50%); /* Ajusta a posição para centralizar o container */
+}
+
+
+/* Estilo do título da página */
+.post-product-container h1 {
+    color: #a94ee5; /* Cor do título */
+    font-size: 24px; /* Tamanho da fonte do título */
+    margin-bottom: 20px; /* Espaço inferior para separar o título do formulário */
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Estilo para cada label no formulário */
+form label {
+    display: block; /* Exibe o label como bloco para ocupar toda a linha */
+    margin-top: 15px; /* Espaço superior para separar dos campos anteriores */
+    color: rgb(200, 200, 200); /* Cor do texto dos labels */
+}
+
+/* Estilo dos campos de texto, número, seleção, área de texto e input de arquivos */
+form input[type="text"],
+form input[type="number"],
+form select,
+form textarea,
+form input[type="file"] {
+    width: 100%; /* Define a largura dos campos para ocupar toda a linha */
+    padding: 10px; /* Adiciona um preenchimento interno */
+    margin-top: 5px; /* Espaço superior para separar do label acima */
+    border-radius: 5px; /* Bordas arredondadas para os campos */
+    border: 1px solid #a94ee5; /* Borda com cor personalizada */
+    background-color: #2c2c2c; /* Cor de fundo dos campos */
+    color: #ffffff; /* Cor do texto dos campos */
+}
+
+/* Permite redimensionamento vertical para o campo de área de texto */
+form textarea {
+    resize: vertical; /* Permite redimensionar somente na vertical */
+}
+
+/* Estilo do botão de submissão */
+.submit-button {
+    margin-top: 20px; /* Espaço superior para separar dos campos anteriores */
+    padding: 12px; /* Preenchimento interno do botão */
+    width: 100%; /* Define a largura do botão para ocupar toda a linha */
+    background-color: #a94ee5; /* Cor de fundo do botão */
+    color: #ffffff; /* Cor do texto do botão */
+    font-size: 16px; /* Tamanho da fonte do botão */
+    border: none; /* Remove borda padrão */
+    border-radius: 5px; /* Adiciona bordas arredondadas */
+    cursor: pointer; /* Cursor de mão ao passar o mouse */
+}
+
+/* Efeito de hover para o botão de submissão */
+.submit-button:hover {
+    background-color: #933ec5; /* Altera a cor de fundo ao passar o mouse */
+}
+
+/* Estilo para cada label no formulário */
+form label {
+    display: block; /* Exibe o label como bloco para ocupar toda a linha */
+    margin-top: 15px; /* Espaço superior para separar dos campos anteriores */
+    color: rgb(200, 200, 200); /* Cor do texto dos labels */
+    font-family: 'Poppins', sans-serif; /* Altere para a fonte desejada */
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+}
+
+/* Estilos para o campo de input de dias */
+.input-group {
+    display: flex; /* Organiza os elementos lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 5px; /* Espaçamento entre o input e os botões */
+}
+/* Estilo do input de número */
+input[type="number"] {
+    width: 35px !important; /* Largura do campo reduzida */
+    height: 32px !important; /* Altura do campo para manter o formato quadrado */
+    padding: 0 !important; /* Remove o preenchimento interno para ajuste mais preciso */
+    border: 2px solid #a94ee5; /* Borda roxa */
+    border-radius: 5px !important; /* Borda sem arredondamento */
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: rgb(114, 114, 114); /* Cor do texto */
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-weight: 400; /* Peso regular */
+    text-align: center; /* Alinha o texto ao centro */
+    font-size: 14px; /* Ajuste o tamanho da fonte conforme necessário */
+    margin-bottom: 10px; /* Espaço abaixo do input de número */
+    margin-top: 20px; /* Espaço acima do input de número */
+}
+
+form .input-group input[type="number"] {
+    width: 35px !important; /* Largura do campo reduzida */
+    height: 32px !important; /* Altura do campo para manter o formato quadrado */
+    /* outras propriedades... */
+    margin-bottom: 10px; /* Espaço abaixo do input de número */
+    margin-top: 20px; /* Espaço acima do input de número */
+}
+.input-group {
+    display: flex; /* Organiza os elementos lado a lado */
+    align-items: center; /* Centraliza verticalmente */
+    gap: 20px; /* Espaçamento entre o input e os botões */
+    margin-top: 15px; /* Ajuste o valor para aumentar o espaço acima dos inputs */
+}
+
+/* Estilos para os botões, se necessário */
+button {
+    margin-top: 10px; /* Espaço entre botões se necessário */
+}
+
+/* Estilo para os botões de incrementar e decrementar */
+.btn-increment,
+.btn-decrement {
+    padding: 5px 10px; /* Espaçamento interno */
+    border: 2px solid #a94ee5; /* Borda roxa */
+    border-radius: 6px; /* Bordas arredondadas */
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #a94ee5; /* Texto roxo */
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    font-weight: 400; /* Peso regular */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cor */
+}
+
+/* Efeito ao passar o mouse nos botões */
+.btn-increment:hover,
+.btn-decrement:hover {
+    background-color: #a94ee5; /* Fundo roxo */
+    color: #fff; /* Texto branco */
+}
+
+/* Estilo para o título do produto */
+.product-info h2 {
+    font-weight: 600; /* Texto mais grosso */
+    color: #a94ee5; /* Cor roxa */
+}
+
+/* Aplicação da fonte Poppins para vários elementos */
+.product-info h2,
+.product-price,
+.total-price,
+.rent-button {
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+}
+
+/* Cor do texto do label de quantidade de dias */
+label[for="rental-days"] {
+    color: rgb(114, 114, 114); /* Cor cinza para o texto do label */
+}
+
+/* Remove as setas de incremento/decremento para Chrome, Safari, Edge e Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none; /* Remove as setas no WebKit */
+    margin: 0; /* Remove o espaçamento */
+}
+
+/* Remove as setas de incremento/decremento no Firefox */
+
+
+/* Estilo para o botão do calendário */
+.btn-calendar {
+    padding: 5px 10px; /* Espaçamento interno */
+    border: 2px solid #a94ee5; /* Borda roxa */
+    border-radius: 6px; /* Bordas arredondadas */
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #a94ee5; /* Texto roxo */
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave de cor */
+}
+
+/* Efeito ao passar o mouse no botão do calendário */
+.btn-calendar:hover {
+    background-color: #a94ee5; /* Fundo roxo ao passar o mouse */
+    color: #fff; /* Texto branco ao passar o mouse */
+}
+
+/* Estilo para o input de data quando visível */
+#calendar-input {
+    margin-left: 10px; /* Espaçamento à esquerda */
+    border: 2px solid #a94ee5; /* Borda roxa */
+    border-radius: 6px; /* Bordas arredondadas */
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #a94ee5; /* Texto roxo */
+}
+/* Preço do produto e preço total */
+.product-price,
+.total-price {
+    font-weight: bold; /* Texto em negrito */
+    color: #a94ee5; /* Cor roxa */
+}.category-title {
+    font-size: 16px; /* Ajuste o tamanho da fonte conforme necessário */
+    color: rgb(169, 169, 169); /* Cor do texto */
+    margin-bottom: 10px; /* Espaço abaixo do título */
+    /* Outros estilos que você utiliza para o título da categoria */
+}
+h2 {
+    font-size: 16px; /* Ajuste para corresponder ao tamanho do título da categoria */
+    color: rgb(122, 122, 122); /* Altere para a cor desejada */
+    margin-bottom: 10px; /* Adicione espaço abaixo */
+    /* Outros estilos que você utiliza para o título da categoria */
+}
+
+/* Estilo para o botão de escolher imagem */
+input[type="file"] {
+    display: none; /* Esconde o input padrão */
+}
+
+.custom-file-upload {
+    display: inline-block; /* Para que o botão fique em linha */
+    padding: 10px 20px; /* Ajusta o espaçamento interno */
+    border: 2px solid #a94ee5; /* Borda roxa */
+    border-radius: 5px; /* Bordas arredondadas */
+    background-color: #2c2c2c; /* Fundo escuro */
+    color: #a94ee5; /* Texto roxo */
+    font-family: 'Poppins', sans-serif; /* Fonte Poppins */
+    cursor: pointer; /* Cursor de mão */
+    transition: background-color 0.3s, color 0.3s; /* Transição suave */
+}
+
+/* Efeito ao passar o mouse */
+.custom-file-upload:hover {
+    background-color: #a94ee5; /* Fundo roxo ao passar o mouse */
+    color: #fff; /* Texto branco ao passar o mouse */
+}

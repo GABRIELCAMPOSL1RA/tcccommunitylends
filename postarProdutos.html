@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/style.css">
+    <link rel="icon" href="IMG/Icon Pagina.png">
+    <title>COMMUNITY LENDS | POSTAR PRODUTO</title>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="IMG/Icon pagina.png" alt="Logo Community Lends" style="max-width: 50px;">
+        </div>
+        <h1 class="logo">COMMUNITY <span class="lends">LENDS</span></h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Buscar produtos">
+            <button>Buscar</button>
+        </div>
+        <nav class="nav-links">
+            <div class="dropdown">
+                <a href="../SITE TCC (HOME)/index.html">Início</a>
+            </div>
+            <div class="dropdown">
+                <a href="#">Conta</a>
+                <ul class="dropdown-menu">
+                    <li><a href="#">Perfil</a></li>
+                    <li><a href="#">Pedidos</a></li>
+                    <li><a href="#">Sair</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main class="post-product-container">
+        <h1>POSTAR NOVO PRODUTO</h1>
+        <form action="/postar-produto" method="POST" enctype="multipart/form-data">
+            <label for="product-title">Nome Chave:</label>
+            <input type="text" id="product-title" name="product-title" required placeholder="Ex: Furadeira, Bicicleta etc...">
+            <label for="product-title">Nome do Produto:</label>
+            <input type="text" id="product-title" name="product-title" required placeholder="Ex: Furadeia Martelete">
+
+            <label for="product-description">Descrição do Produto:</label>
+            <textarea id="product-description" name="product-description" rows="4" required placeholder="Breve descrição sobre o produto"></textarea>
+
+            <label for="product-category">Categoria:</label>
+            <select id="product-category" name="product-category" required> 
+                <option value="ferramentas">Eletrônicos</option>
+                <option value="eletrônicos">Ferramentas</option>
+                <option value="eletrônicos">Esportes</option>
+                <option value="eletrônicos">Móveis</option>
+                <option value="eletrônicos">Roupas</option>
+                <option value="eletrônicos">Livros</option>
+                <option value="eletrônicos">Estudo</option>
+                <option value="eletrônicos">Escritório</option>
+                <option value="eletrônicos">Brinquedos</option>
+                <option value="eletrônicos">Transporte</option>
+                <option value="eletrônicos">Cozinha</option>
+                <option value="eletrônicos">Jardinagem</option>
+                <option value="eletrônicos">Musicais</option>
+                <option value="eletrônicos">Artesanato</option>
+                <option value="eletrônicos">Camping</option>
+                <option value="eletrônicos">Decoração</option>
+                <option value="eletrônicos">Festa</option>
+            </select>
+            
+            <!-- Contêiner para o input e os botões de incremento/decremento -->
+            <div class="input-group">
+                <h2 class="category-title">Valor da diária:</h2> <!-- Frase posicionada acima -->
+                <button class="btn-decrement" onclick="decrementDays()">-</button>
+                <input type="number" id="rental-days" name="rental-days" min="1" max="30" value="1" oninput="updateTotalPrice()">
+                <button class="btn-increment" onclick="incrementDays()">+</button>
+            </div>            
+            
+            <p class="total-price">Total: R$ <span id="totalPrice">10,00</span></p>
+                      
+            <label class="custom-file-upload">
+                Escolher imagem
+                <input type="file" id="image-upload" name="image-upload" accept="image/*" multiple onchange="previewImages(event)">
+            </label>
+            
+            <div id="image-preview-container" style="display: flex; margin-top: 10px;">
+                <!-- As imagens selecionadas aparecerão aqui -->
+            </div>
+            <p id="error-message" style="color: red; display: none;"></p>
+            
+            <button type="submit" class="submit-button">Postar Produto</button>
+        </form>
+    </main>
+
+    <script src="JS/main.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,144 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Corpo geral */
+body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #4c0296, #8c1aff); /* Roxo escuro elegante */
+    color: #fff; /* Texto branco para contraste */
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    padding: 20px; /* Espaçamento para evitar elementos colados nas bordas */
+}
+
+/* Cabeçalho */
+header {
+    width: 65%;
+    text-align: center;
+    padding: 2% 0;
+    background-color: #471d82; /* Um roxo mais claro para destaque */
+    margin-bottom: 70px;
+    border-radius: 10px; /* Bordas arredondadas para suavizar */
+}
+
+header img {
+    height: 70px;
+    margin-bottom: 10px;
+}
+
+header h1 {
+    font-size: 2rem;
+    margin-top: 20px;
+}
+
+/* Contêiner principal */
+.main-container {
+    width: 95%;
+    max-width: 1200px; /* Centralizar o conteúdo */
+    margin: 0 auto; /* Garantir centralização */
+    background: #471d82; /* Mesma cor do cabeçalho */
+    padding: 30px; /* Maior espaçamento interno */
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+/* Estilo dos cartões de produto */
+.product-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    background: #471d82; /* Roxo mais vibrante */
+    padding: 20px; /* Espaçamento interno maior */
+    border-radius: 10px;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.product-card img {
+    width: 500px;
+    height: auto;
+    border-radius: 10px;
+    margin-right: 40px; /* Espaço entre imagem e texto */
+}
+
+.product-card div {
+    flex: 1; /* Garante que o texto ocupe o espaço restante */
+    padding: 10px; /* Espaçamento interno no bloco de texto */
+}
+
+.product-card h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+}
+
+.product-card p {
+    margin-bottom: 8px;
+}
+
+/* Botões */
+button, a button {
+    padding: 12px 20px; /* Botões mais largos e altos */
+    background-color: #ff7bfc; /* Rosa claro para contraste */
+    color: #4c0296; /* Roxo escuro para texto */
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-decoration: none;
+}
+
+button:hover, a button:hover {
+    background-color: #ff44f3; /* Rosa mais vibrante ao passar o mouse */
+    color: #fff; /* Contraste ao interagir */
+}
+
+/* Botão adicional estilizado */
+.add-button {
+    background-color: #7b1e9b; /* Roxo escuro para botões de ação */
+    color: #fff;
+}
+
+.add-button:hover {
+    background-color: #9c34c6; /* Mais vibrante ao interagir */
+}
+
+/* Ajuste no texto e espaçamento do contêiner */
+.product-card div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Alinhamento perfeito */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espaçamento entre cartões */
+}
+
+
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .product-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .product-card img {
+        margin: 0 auto 15px;
+    }
+
+    .product-card div {
+        padding: 0; /* Remove espaçamento extra em telas pequenas */
+    }
+}
